@@ -34,9 +34,22 @@ const rl = readline.createInterface({
     output: process.stdout
 });
 
-// Se não houver argumento, pede o CEP interativamente
-rl.question('Digite o CEP (apenas números ou no formato 00000-000): ', async (cepInput) => {
-    const cepValido = validarCEP(cepInput);
+Se não houver argumento, pede o CEP interativamente
+
+        rl.question('Digite o CEP (apenas números ou no formato 00000-000): ', async (cepInput) => {
+        const cepValido = validarCEP(cepInput);
+
+        if (!cepValido) {
+            console.log('Formato de CEP inválido. Use 00000000 ou 00000-000');
+            rl.close();
+            process.exit(1);
+        }
+
+        if (!cepValido) {
+            console.log('Formato de CEP inválido. Use 00000000 ou 00000-000');
+            rl.close();
+            process.exit(1);
+        }
 
     if (!cepValido) {
         console.log('Formato de CEP inválido. Use 00000000 ou 00000-000');
