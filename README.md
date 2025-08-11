@@ -5,6 +5,26 @@ CLI que consulta informações de endereço a partir de um CEP usando a API púb
 
 chmod u+x cep-cli.js (dará permissão de execução do programa apenas para o usuário do programa)
 
+# Uso
+
+// programa manager de apis publicas fazendo requests http simplificando
+
+npm install axios
+
+# Execute de uma das seguintes formas:
+
+Passando o CEP como argumento:
+
+./cep-cli.js 01001000
+
+ou
+
+node cep-cli.js 01001-000
+
+Sem argumentos (modo interativo - usando a biblioteca de interface):
+
+./cep-cli.js
+
 # Estudo do código 
 
 Cria interface para leitura de input. Essa biblioteca já veio com o node 
